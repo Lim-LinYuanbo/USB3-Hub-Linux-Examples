@@ -1,10 +1,10 @@
 # USB3-Hub-Linux-Examples
 
-1. description
+## 1. description
 
-2. demonstration
+## 2. demonstration
 
-2.1 compile environment
+### 2.1 compile environment
 
 ```shell
 # this is my machine
@@ -20,9 +20,9 @@ $ sudo apt install git make gcc
 $ sudo apt install libusb-1.0-0-dev
 ```
 
-2.2 run and test
+### 2.2 run and test
 
-2.2.1 host is x86, device is usb5744
+#### 2.2.1 host is x86, device is usb5744
 
 ```shell
 # insert usb-hub to your machine and find vid/pid
@@ -70,7 +70,7 @@ Kernel Driver Detached!
 Port now in TX_COMPLIANCE test mode!
 ```
 
-2.2.2 host is arm
+### 2.2.2 host is arm
 
 ```shell
 ```
