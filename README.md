@@ -2,6 +2,8 @@
 
 ## 1. description
 
+> [Entering USB3.1 TX Compliance Mode with a Linux Host](https://microchip.my.site.com/s/article/Entering-USB3-1-TX-Compliance-Mode-with-a-Linux-Host)
+
 ## 2. demonstration
 
 ### 2.1 compile environment
@@ -26,10 +28,24 @@ $ sudo apt install libusb-1.0-0-dev
 
 ```shell
 # insert usb-hub to your machine and find vid/pid
+$ lsusb
+...
+# USB3 hub
+Bus 004 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
+# HFC (Hub Feature Controller)(NOTE:This is required, otherwise other features cannot be triggered)
+Bus 003 Device 005: ID 0424:2740 Microchip Technology, Inc. (formerly SMSC)
+# USB2 hub
+Bus 003 Device 004: ID 0424:2744 Microchip Technology, Inc. (formerly SMSC) Hub
+...
+```
+
+**NOTE : Make sure HFC is enabled.**
+
+```shell
 $ lsusb -v
 ...
 Bus 004 Device 002: ID 0424:5744 Microchip Technology, Inc. (formerly SMSC) Hub
-Couldn't open device, some information will be missing
+Couldnot open device, some information will be missing
 Device Descriptor:
   bLength                18
   bDescriptorType         1
